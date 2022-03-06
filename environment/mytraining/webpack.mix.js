@@ -11,10 +11,19 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js( 'resources/js/app.js', 'public/js' ).js( 'resources/js/sample.js', 'public/js' ).autoload( {
+    "jquery": [ '$', 'window.jQuery' ],
+} ).postCss( 'resources/css/app.css', 'public/css', [
+    require( 'postcss-import' ),
+    require( 'tailwindcss' ),
+    require( 'autoprefixer' ),
+] )
    .js('resources/js/calendar.js','public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .sass('resources/sass/user.scss', 'public/css')
    .sass('resources/sass/signin.scss', 'public/css')
    .sass('resources/sass/main.scss', 'public/css')
    .sass('resources/sass/calendar.scss', 'public/css');
+   
+   
+   

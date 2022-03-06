@@ -34,8 +34,13 @@ class TrainingController extends Controller
       }
       $bodyparts = BodyPart::all();
       $postcategories = PostCategory::all();
-      return view('user.main.record', ['posts' => $posts, 'cond_title' => $cond_title, 'bodyparts' => $bodyparts,'postcategories' => $postcategories]);
+        return view('user.main.record', ['posts' => $posts, 'cond_title' => $cond_title, 'bodyparts' => $bodyparts,'postcategories' => $postcategories]);
   }
+    public function show(Request $request){
+      $bodyparts = BodyPart::find($request->body_part_id);
+      $postcategory = $bodypart ->postcategories;
+       return view('user.main.record',['postcategory' =>$postcategory]);
+    }
     public function top(){
         return view('user.top.index');
     }

@@ -81,16 +81,17 @@
     </div>
     <p>鍛える部位：<br>
     <select name="bodyparts">
+        <option value="" selected="selected">鍛える部位を選択</option>
     @foreach($bodyparts as $bodypart)
          <option value="{{ $bodypart->id}}">{{$bodypart->name}}</option>
     @endforeach
     </select>
-    <p>種目：<br>
+   {{-- <p>種目：<br>
      <select name="bodyparts">
     @foreach($bodyparts as $postcategory)
          <option value="{{ $$postcategory->postcategory->id}}">{{$bodypart->postcategory->name}}</option>
     @endforeach
-    </select>
+    </select>--}}
     
     @endsection
     
