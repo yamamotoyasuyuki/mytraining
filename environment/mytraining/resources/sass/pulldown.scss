@@ -1,0 +1,89 @@
+.formagg{
+    display: flex;
+    
+}
+.form1{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #b0b0b0;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.form2{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #b0b0b0;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.pulldown{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.children{
+    width: 250px;
+}
+.save-btn{
+    width: 80px;
+    // margin-left: 150px;
+    // margin-top: 50px; 
+    margin: 20px 0px 0px 130px;
+}
+.bui p,.shumoku p{
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.traincontents{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+.trainweight{
+    width: 70px;
+    height: 17px;
+}
+
+#input_plural {
+    margin: 10px 0;
+}
+ 
+#input_plural input.form-control {
+    display: inline-block;
+    width: 75%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+}
+ 
+#input_plural input.pluralBtn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.bi {
+    font-size: 20px;
+}
+.add,.addbtn{
+    color: red;
+}
+.del,.dele{
+    color: blue;
+}
+
+.addbtn,.dele{
+    font-size: 30px;
+}

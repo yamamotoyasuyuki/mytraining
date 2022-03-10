@@ -16,9 +16,9 @@ class CreateBodypartPostcategoriesTable extends Migration
         Schema::create('body_part_post_categories', function (Blueprint $table) {
             $table->unsignedBigInteger('body_part_id');
             $table->unsignedBigInteger('post_category_id');
-            $table->primary(['body_part_id','post_category_id']);
-            $table->foreign('body_part_id')->references('id')->on('body_parts');
-            $table->foreign('post_category_id')->references('id')->on('post_categories');
+            // $table->primary(['body_part_id','post_category_id']);
+            // $table->foreign('body_part_id')->references('id')->on('body_parts');
+            // $table->foreign('post_category_id')->references('id')->on('post_categories');
             // $table->dropForeign('bodypart_postcategories');
         });
     }
@@ -30,7 +30,7 @@ class CreateBodypartPostcategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bodypart_postcategories');
+        Schema::dropIfExists('body_part_post_categories');
         // Schema::table('bodypart_postcategories', function (Blueprint $table) {
         // $table->foreign('body_part_id')->references('id')->on('body_parts');
         // $table->foreign('post_category_id')->references('id')->on('post_categories');

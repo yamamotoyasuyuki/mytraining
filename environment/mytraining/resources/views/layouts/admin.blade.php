@@ -40,7 +40,7 @@
   <div class="entire">
   <header class="signin-nav">
    <div class="signin-nav-content">
-     <a href="/home"　class="oppai">ホーム</a>
+     <a href="https://dde0a5f9c85f40c08433a37789e23c97.vfs.cloud9.us-east-2.amazonaws.com/"　class="oppai">ホーム</a>
    </div>
   </header>
   @yield('content')

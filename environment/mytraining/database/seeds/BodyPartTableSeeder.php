@@ -13,10 +13,10 @@ class BodyPartTableSeeder extends Seeder
     public function run()
     {
          $bodyparts = [
-           ['id' => '01', 'name' => '胸'],
-           ['id' => '02', 'name' => '腕'],
-           ['id' => '03', 'name' => '腹'],
-           ['id' => '04', 'name' => '脚'],
+           ['id' => '1', 'name' => '胸'],
+           ['id' => '2', 'name' => '腕'],
+           ['id' => '3', 'name' => '腹'],
+           ['id' => '4', 'name' => '脚'],
         ];
         DB::table('body_parts')->insert($bodyparts);
         

@@ -10,6 +10,6 @@ class PostCategory extends Model
 {
     public function bodyparts()
     {
-       return $this->belongsToMany('App\Models\BodyPart');
+       return $this->hasMany('App\Models\BodyPart');
     }
 }

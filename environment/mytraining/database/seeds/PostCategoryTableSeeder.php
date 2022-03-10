@@ -13,10 +13,10 @@ class PostCategoryTableSeeder extends Seeder
     public function run()
     {
          $postcategories = [
-           ['id' => '1', 'name' => 'ベンチプレス'],
-           ['id' => '2', 'name' => 'ペックフライ'],
-           ['id' => '3', 'name' => 'スミスマシンデクラインプレス'],
-           ['id' => '4', 'name' => 'インクラインスミスマシン'],
+           ['id' => '01', 'name' => 'ベンチプレス'],
+           ['id' => '02', 'name' => 'アームカール'],
+           ['id' => '03', 'name' => 'シットアップ'],
+           ['id' => '04', 'name' => 'スクワット'],
         ];
         DB::table('post_categories')->insert($postcategories);
         

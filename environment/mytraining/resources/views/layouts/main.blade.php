@@ -13,8 +13,11 @@
     <script src="{{ secure_asset('js/app.js') }}" defer></script>
     <script src="{{ secure_asset('js/calendar.js') }}" defer></script>
     <script src="{{ secure_asset('js/graph.js') }}" defer></script>
+    <script src="{{ secure_asset('js/dropdown.js') }}" defer></script>
+    <script src="{{ secure_asset('js/itemadd.js') }}" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
+    
+    
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -31,10 +34,16 @@
         }
       }
     </style>
+    {{--bootstrap関連--}}
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    {{--css関連--}}
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/calendar.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/pulldown.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <!-- Custom styles for this template -->
 </head>
 <body>
@@ -93,9 +102,12 @@
 @yield('content')
 </main>
 <script
+  {{--src = "{{ mix('js/dropdown.js') }}"--}}
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+  
+</script>
   
   
 </body>

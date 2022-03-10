@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::group(['prefix' => 'home', 'middleware' => 'auth'], function() {
+     Route::group(['prefix' => 'home', 'middleware' => 'auth'], function() {
      Route::get('', 'HomeController@index')->name('home');
-     Route::get('main', 'User\TrainingController@add');
      Route::post('main', 'User\TrainingController@create');
+     Route::post('post', 'User\TrainingController@post');
      Route::get('main', 'User\TrainingController@summary');
 });

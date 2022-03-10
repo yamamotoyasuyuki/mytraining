@@ -148,7 +148,6 @@ return [
      'attributes' => [
         'body_part_id'  => '部位',
          'post_category_id'=> '種目',
-       
         ],
  
 ];

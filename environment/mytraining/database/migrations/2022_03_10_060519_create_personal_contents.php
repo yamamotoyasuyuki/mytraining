@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostContents extends Migration
+class CreatePersonalContents extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreatePostContents extends Migration
      */
     public function up()
     {
-        Schema::create('post_contents', function (Blueprint $table) {
+        Schema::create('personal_contents', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('body_part_id');
-            $table->integer('post_category_id');
+            $table->string('bodypart_name');
+            $table->string('training_name');
+            $table->integer('set_data');
+            $table->integer('weight_data');
+            $table->integer('count_data');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreatePostContents extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_contents');
+        Schema::dropIfExists('personal_contents');
     }
 }

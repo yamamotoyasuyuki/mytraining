@@ -5,5 +5,8 @@
     "/css/signin.css": "/css/signin.css",
     "/css/main.css": "/css/main.css",
     "/css/calendar.css": "/css/calendar.css",
-    "/js/calendar.js": "/js/calendar.js"
+    "/css/pulldown.css": "/css/pulldown.css",
+    "/js/calendar.js": "/js/calendar.js",
+    "/js/dropdown.js": "/js/dropdown.js",
+    "/js/itemadd.js": "/js/itemadd.js"
 }
