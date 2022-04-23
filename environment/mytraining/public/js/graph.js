@@ -81,103 +81,105 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/calendar.js":
-/*!**********************************!*\
-  !*** ./resources/js/calendar.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var week = ["日", "月", "火", "水", "木", "金", "土"];
-var today = new Date(); // 月末だとずれる可能性があるため、1日固定で取得
-
-var showDate = new Date(today.getFullYear(), today.getMonth(), 1); // 初期表示
-
-window.onload = function () {
-  showProcess(today, calendar);
-}; // 前の月表示
-
-
-function prev() {
-  showDate.setMonth(showDate.getMonth() - 1);
-  showProcess(showDate);
-} // 次の月表示
-
-
-function next() {
-  showDate.setMonth(showDate.getMonth() + 1);
-  showProcess(showDate);
-} // カレンダー表示
-
-
-function showProcess(date) {
-  var year = date.getFullYear();
-  var month = date.getMonth();
-  document.querySelector('#header').innerHTML = year + "年 " + (month + 1) + "月";
-  var calendar = createProcess(year, month);
-  document.querySelector('#calendar').innerHTML = calendar;
-} // カレンダー作成
-
-
-function createProcess(year, month) {
-  // 曜日
-  var calendar = "<table><tr class='dayOfWeek'>";
-
-  for (var i = 0; i < week.length; i++) {
-    calendar += "<th>" + week[i] + "</th>";
-  }
-
-  calendar += "</tr>";
-  var count = 0;
-  var startDayOfWeek = new Date(year, month, 1).getDay();
-  var endDate = new Date(year, month + 1, 0).getDate();
-  var lastMonthEndDate = new Date(year, month, 0).getDate();
-  var row = Math.ceil((startDayOfWeek + endDate) / week.length); // 1行ずつ設定
-
-  for (var i = 0; i < row; i++) {
-    calendar += "<tr>"; // 1colum単位で設定
-
-    for (var j = 0; j < week.length; j++) {
-      if (i == 0 && j < startDayOfWeek) {
-        // 1行目で1日まで先月の日付を設定
-        calendar += "<td class='disabled'>" + (lastMonthEndDate - startDayOfWeek + j + 1) + "</td>";
-      } else if (count >= endDate) {
-        // 最終行で最終日以降、翌月の日付を設定
-        count++;
-        calendar += "<td class='disabled'>" + (count - endDate) + "</td>";
-      } else {
-        // 当月の日付を曜日に照らし合わせて設定
-        count++;
-
-        if (year == today.getFullYear() && month == today.getMonth() && count == today.getDate()) {
-          calendar += "<td class='today'>" + count + "</td>";
-        } else {
-          calendar += "<td>" + count + "</td>";
-        }
-      }
-    }
-
-    calendar += "</tr>";
-  }
-
-  return calendar;
-}
-
-/***/ }),
-
-/***/ 1:
-/*!****************************************!*\
-  !*** multi ./resources/js/calendar.js ***!
-  \****************************************/
+/***/ "./resources/js/graph.js":
+/*!*******************************!*\
+  !*** ./resources/js/graph.js ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/js/calendar.js */"./resources/js/calendar.js");
+"use strict";
+ // hidden1の値を取得
+
+var value = document.getElementById("hidden1").value; //value(JSON形式の文字列)を配列に変換
+
+var jsonArray = JSON.parse(value); // 結果格納用の配列
+
+var resultArray = new Array();
+var monthlyArray = new Array();
+var monthlyArrayCount = new Array(); // jsonArrayの要素数だけ繰り返す
+
+for (var i = 0; i < jsonArray.length; i++) {
+  // jsonArray[i] : 一つ一つ取り出してきた値
+  // 一つ一つ取り出してきた値からrmを計算
+  var date = new Date(jsonArray[i].trainday);
+  var month = date.getMonth();
+  month += 1;
+  var year = date.getYear();
+  year += 1900;
+  var rm = jsonArray[i].weight_data * (1 + jsonArray[i].count_data / 40);
+  resultArray.push(rm); // 月ごとの合計値を配列から取り出す
+
+  var rmnumber = 0;
+
+  if (monthlyArray["".concat(year).concat(month)]) {
+    // 月ごとに集計値が入っている連想配列から値を取り出し、数値に変換する
+    rmnumber = parseInt(monthlyArray["".concat(year).concat(month)], 10);
+  } // 合計値増加
+
+
+  rmnumber += rm; // 増加させた内容を新しい値として連想配列に適用
+
+  monthlyArray["".concat(year).concat(month)] = rmnumber; // 月ごとのトレーニング数を配列から取り出す
+
+  var monthlyCount = 0;
+
+  if (monthlyArrayCount["".concat(year).concat(month)]) {
+    // 月ごとにカウント数が入っている連想配列から値を取り出し、数値に変換する
+    monthlyCount = parseInt(monthlyArrayCount["".concat(year).concat(month)], 10);
+  } //カウント数増加
+
+
+  monthlyCount += 1; // 増加させた内容を新しい値として連想配列に適用
+
+  monthlyArrayCount["".concat(year).concat(month)] = monthlyCount;
+}
+
+console.log(monthlyArrayCount);
+var averageArray = new Array();
+
+for (var key in monthlyArray) {
+  // 各月の合計値をカウント数で割り、各月の平均値を算出
+  var monthlyValue = monthlyArray[key];
+  var _monthlyCount = monthlyArrayCount[key]; // 各月の平均値を格納する配列に追加
+
+  averageArray.push(monthlyValue / _monthlyCount);
+}
+
+var targetPostCategoryName = document.getElementById("hidden2").value;
+var labels = ['1月目', '2月目', '3月目', '4月目', '5月目', '6月目', '7月目', '8月目', '9月目', '10月目', '11月目', '12月目'];
+var data = {
+  labels: labels,
+  datasets: [{
+    label: targetPostCategoryName,
+    backgroundColor: 'rgb(235, 254, 255)',
+    borderColor: 'rgb(0, 4, 255)',
+    borderWidth: '4',
+    data: averageArray
+  }]
+};
+var config = {
+  type: 'line',
+  data: data,
+  options: {}
+};
+var myChart = new Chart(document.getElementById('myChart'), config);
+
+/***/ }),
+
+/***/ 2:
+/*!*************************************!*\
+  !*** multi ./resources/js/graph.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/js/graph.js */"./resources/js/graph.js");
 
 
 /***/ })

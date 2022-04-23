@@ -1,13 +1,9 @@
 'use strict';
-// $( function ()
-// {
-//     console.log('run jquery');
-// } )
 
-var $children = $('.children'); //都道府県の要素を変数に入れます。
+var $children = $('.children'); //トレーニング種目の要素を変数に入れます。
 var original = $children.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
  
-//地方側のselect要素が変更になるとイベントが発生
+//鍛える部位側のselect要素が変更になるとイベントが発生
 $('.parent').change(function() {
  
   //選択された部位のvalueを取得し変数に入れる
@@ -24,11 +20,18 @@ $('.parent').change(function() {
  
   });
  
-  //地方側のselect要素が未選択の場合、都道府県をdisabledにする
+  //部位側のselect要素が未選択の場合、トレーニング種目をdisabledにする
   if ($(this).val() == "") {
     $children.attr('disabled', 'disabled');
   } else {
     $children.removeAttr('disabled');
   }
  
+});
+
+//以下は削除リスト表示
+$(document).ready(function(){
+  $('.delete-list h5').on('click', function(){
+    $(this).next().toggleClass('hidden');
+  });
 });

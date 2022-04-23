@@ -10,15 +10,17 @@
     
     <title>@yield('title')</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="{{ secure_asset('js/app.js') }}" defer></script>
-    <script src="{{ secure_asset('js/calendar.js') }}" defer></script>
-    <script src="{{ secure_asset('js/graph.js') }}" defer></script>
     <script src="{{ secure_asset('js/dropdown.js') }}" defer></script>
-    <script src="{{ secure_asset('js/itemadd.js') }}" defer></script>
+    <script src="{{ secure_asset('js/graph.js') }}" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     
-    
     <style>
+     　.container {font-family: 'Noto Sans JP', sans-serif;}
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -42,6 +44,8 @@
     <link href="{{ secure_asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/calendar.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/pulldown.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/edit.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/graph.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <!-- Custom styles for this template -->
@@ -67,8 +71,8 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                     
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <div class="dropdown-menu judgmentdiv" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item judgment" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('messages.Logout') }}
@@ -88,21 +92,21 @@
                 <p class="bt bt-border-gradient"><span class="bt-text-gradient--silver">Menu</span></p>
                 </div>
                 <li class="btn-border-gradient-wrap btn-border-gradient-wrap--gold">
-                    <a href="https://dde0a5f9c85f40c08433a37789e23c97.vfs.cloud9.us-east-2.amazonaws.com/home" class="btn btn-border-gradient"><span class="btn-text-gradient--gold">Home</span></a></li>
+                    <a href="{{route('home')}}" class="btn btn-border-gradient"><span class="btn-text-gradient--gold menuline">Home</span></a></li>
                 <li class="btn-border-gradient-wrap btn-border-gradient-wrap--gold">
-                    <a href="https://dde0a5f9c85f40c08433a37789e23c97.vfs.cloud9.us-east-2.amazonaws.com/home/main" class="btn btn-border-gradient"><span class="btn-text-gradient--gold">トレーニング</span></a></li>
+                    <a href="{{ route('summary') }}" class="btn btn-border-gradient"><span class="btn-text-gradient--gold menuline">トレーニング</span></a></li>
                 <li class="btn-border-gradient-wrap btn-border-gradient-wrap--gold">
-                    <a href="https://dde0a5f9c85f40c08433a37789e23c97.vfs.cloud9.us-east-2.amazonaws.com/home/main" class="btn btn-border-gradient"><span class="btn-text-gradient--gold">SNS</span></a></li>
+                    <a href="{{ route('achievement') }}" class="btn btn-border-gradient"><span class="btn-text-gradient--gold menuline">トレーニング実績</span></a></li>
                 <li class="btn-border-gradient-wrap btn-border-gradient-wrap--gold">
-                    <a href="https://dde0a5f9c85f40c08433a37789e23c97.vfs.cloud9.us-east-2.amazonaws.com/home/main" class="btn btn-border-gradient"><span class="btn-text-gradient--gold">設定</span></a></li>
+                    <a href="{{route('config')}}" class="btn btn-border-gradient"><span class="btn-text-gradient--gold menuline">設定</span></a></li>
             </ul>
         </div>
     </header>
 <main class="py-4">
 @yield('content')
 </main>
+
 <script
-  {{--src = "{{ mix('js/dropdown.js') }}"--}}
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous">

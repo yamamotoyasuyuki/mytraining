@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostCategoryMain extends Migration
+class CreateHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreatePostCategoryMain extends Migration
      */
     public function up()
     {
-        Schema::create('post_category_main', function (Blueprint $table) {
+        Schema::create('histories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',255);
+            $table->integer('personal_content_id');
+            $table->string('edited_at');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreatePostCategoryMain extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_category_main');
+        Schema::dropIfExists('histories');
     }
 }

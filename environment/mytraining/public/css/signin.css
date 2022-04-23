@@ -10,18 +10,17 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #FCF97A;
   justify-content: space-around;
 }
 
 .form-signin {
   width: 100%;
-  max-width: 476px;
+  max-width: 368px;
   padding-left: 100px;
 }
 
-.form-signin .checkbox {
-  font-weight: 400;
+.checkbox {
+  font-weight: bold;
 }
 
 .form-signin .form-control {
@@ -29,7 +28,7 @@ body {
   box-sizing: border-box;
   height: auto;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .form-signin .form-control:focus {
@@ -52,27 +51,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.signinimage {
-  width: 500px;
-}
-
-.mybutton {
-  margin-top: 50px;
-}
-
-.upbutton {
-  margin-top: 50px;
+  justify-content: flex-end;
 }
 
 .login-header {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   font-family: "\30D2\30E9\30AE\30CE\660E\671D   Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HGS\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", serif;
   position: relative;
-  padding: 0.5rem 2rem;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+}
+
+.register-header {
+  padding: 7px 0 7px 0;
 }
 
 .login-header:before,
@@ -98,11 +89,6 @@ body {
   max-width: 100%;
 }
 
-.btn {
-  width: 260px;
-  height: 50px;
-}
-
 form {
   width: 140%;
 }
@@ -113,29 +99,21 @@ form {
   font-size: 20px;
 }
 
-.form-group .col-md-8,
-.btn {
+.form-group .col-md-2 {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group .col-md-3 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group .col-md-6 {
   color: #fff;
   font-weight: bold;
   font-size: 20px;
-}
-
-.form-group .col-md-6 .btn {
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.form-signin.btn {
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.signin-nav {
-  display: flex;
-  justify-content: flex-end;
-  width: 140%;
 }
 
 .signin-nav-content {
@@ -172,5 +150,21 @@ form {
 .login-box {
   width: 800px;
   max-width: 100%;
+}
+
+.textbox,
+.textbox:focus {
+  background-color: #5e5e5e;
+  color: #fff;
+  font-weight: bold;
+  font-family: "\30D2\30E9\30AE\30CE\660E\671D   Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HGS\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", serif;
+}
+
+.btndesign {
+  font-family: "\30D2\30E9\30AE\30CE\660E\671D   Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HGS\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", serif;
+  background-color: #BAB049;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.8rem;
 }
 

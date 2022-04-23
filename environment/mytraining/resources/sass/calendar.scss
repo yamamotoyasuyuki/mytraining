@@ -1,76 +1,101 @@
 @charset "utf-8";
-
-/*全体*/
-.wrapper{
-    max-width: 400px;
-    // margin: 0 auto;
-    color: #666;
+ .container {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-top: 80px;
 }
-#header {
+.calendar-container{
+    width: 31%;
+    margin-left: 40px;
+}
+table,.calendar-container{
+    font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
+    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+.calendar-heading{
+    margin-left: 70px;
+    font-weight: bold;
+    padding-top: 11px;
+    margin-bottom: 10px;
+}
+.calendarindex{
+    transform: translate(0%, -20%)
+}
+.display-none{
+display:none;
+}
+.td-c a{
+   background-image: linear-gradient(0deg, #b8751e 0%, #ffce08 37%, #fefeb2 47%, #fafad6 50%, #fefeb2 53%, #e1ce08 63%, #b8751e 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 35px;
+  vertical-align: top;
+}
+.th-c {
+    height: 25px;
+    width: 56px;
     text-align: center;
-    font-size: 24px;
-    width: 100%;
-    margin: 1rem 0 0;
+    background-color: rgb(0,0,0);
 }
-
-/*カレンダー*/
-#calendar {
-    text-align: center;
-    width: 100%;
+.td-c {
+    height: 70px;
+    background-color: rgb(0,0,0);
+    vertical-align: top;
 }
-table {
-    outline: 2px solid #ddd;
-    border-collapse: collapse;
-    width: 100%;
+.today {
+    background: #ff8787 !important;
+    height: 70px;
+    vertical-align: top;
 }
-th {
+td:not(.today){
     color: #000;
 }
-th, td {
-    outline: 1px solid #ddd;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
+
+.th-c:nth-of-type(2), .td-c:nth-of-type(2),
+.th-c:nth-of-type(3), .td-c:nth-of-type(3),
+.th-c:nth-of-type(4), .td-c:nth-of-type(4),
+.th-c:nth-of-type(5), .td-c:nth-of-type(5),
+.th-c:nth-of-type(6), .td-c:nth-of-type(6),{
+    color: white;
 }
-/*日曜日*/
-td:first-child {
+.th-c:nth-of-type(1), .td-c:nth-of-type(1) {
     color: red;
 }
-/*土曜日*/
-td:last-child {
-    color: blue;
+.th-c:nth-of-type(7), .td-c:nth-of-type(7) {
+    color: #00d0ff;
 }
-/*前後月の日付*/
-td.disabled {
-    color: #ccc;
-}
-/*本日*/
-td.today {
-    background-color: #D65E72;
-    color: #fff;
+.table-width{
+    width: 100%;
 }
 
-/*ボタン*/
-#next-prev-button {
-    position: relative;
+table .calendar{
+    width: 50%;
 }
-#next-prev-button button{
-    cursor: pointer;
-    background: #B78D4A;
-    color: #fff;
-    border: 1px solid #B78D4A;
-    border-radius: 4px;
-    font-size: 1rem;
-    padding: 0.5rem 2rem;
-    margin: 1rem 0;
+
+table .calendar th, table .calendar td{
+    padding: 8px;
+    text-align: center;
+    border: 3px solid #fff;
 }
-#next-prev-button button:hover{
-    background-color: #D4BB92;
-    border-color: #D4BB92;
+table .calendar td{
+    font-size: 15px;
 }
-#prev {
-    float: left;
+
+/* 行の最初のtdは日曜日なため赤く */
+table .calendar th:first-of-type, table .calendar td:first-of-type{
+    background-color: #ffefef;
+    color: #FF0000;
+    font-weight: bold;
 }
-#next {
-    float: right;
+
+/* 行の最後のtdは土曜日なため青く */
+table .calendar th:last-of-type, table .calendar td:last-of-type{
+    background-color: #ededff;
+    color: #0000FF;
+    font-weight: bold;
+}
+
+/* 今日の日付 */
+table .calendar td.today{
+    background-color: #fbffa3;
+    font-weight: bold;
 }

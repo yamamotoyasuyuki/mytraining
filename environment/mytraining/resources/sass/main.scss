@@ -1,38 +1,54 @@
+html,body{
+  background-color: #fff;
+}
 .nav-main{
     width: 100%;
-    height: 50px;
+    height: 35px;
     background-color: black;
     display: flex;
-    padding-top: 7px;
+}
+.navbarDropdown{
+  transform: transitiontranslate(0%,-10%);
 }
 .nav-main-content{
     flex-grow: 2;
+    padding: 0 0 0 10px;
+    transform: translate(0px, -3px);
 }
 
 .nav-main-menu{
+    // box-shadow: 20px 12px 25px 1px #fff;
     display: flex;
+    flex-grow: 0.1;
+    height: 33px;
     justify-content: space-between;
-    box-shadow: 27px 15px 25px 1px #fff;
-    flex-grow: 0.5;
-    padding-right: 20px;
+    // padding-right: 20px;
 }
 
+.judgment{
+  display: inline;
+}
+.judgmentdiv{
+  margin: -3px 0px 0px -6px;
+}
+// 以下ゴールドボタン
 *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
-
 .btn,
 a.btn,
 button.btn,
-.nav-main-li{
+button.btn,
+.nav-main-li
+{
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1;
   position: relative;
   display: inline-block;
-  padding: 0px 20px;
+  padding: 4px 10px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -46,18 +62,18 @@ button.btn,
   letter-spacing: 0.1em;
   color: #212529;
   border-radius: 0.5rem;
-  transform: translate(0%,-10%);
+  // transform: translate(0%,-10%);
 }
 
 .btn-border-gradient-wrap{
   display: inline-block;
-
-  padding: 7px;
-
   border-radius: 0.5rem;
 }
 
 .btn-border-gradient-wrap--gold {
+  height: 30px;
+}
+.btn-border-gradient-wrap--gold1{
   background-image: -webkit-linear-gradient(
     315deg,
     #704308 0%,
@@ -78,18 +94,50 @@ button.btn,
     #e1ce08 63%,
     #704308 100%
   );
-  height: 30px;
+  height: 34px;
+  width: 65px;
+  padding: 1px 0px 0 1px;
+}
+.menuline{
+  border-bottom: 2px solid #ededed;
+}
+.btn-width{
+  width: 70px;
+  transform: translate(325%, -20%)
+}
+.pcselectbtwidth{
+  width: 70px;
+}
+.calendarbtn-width{
+  display: flex;
+  justify-content: space-between;
+  width: 283px;
+}
+.addbtndiv .addbutton .addspan{
+  font-size: 18px;
+}
+.addbutton{
+  width: 41px;
 }
 
-.btn-border-gradient-wrap--gold:hover a.btn {
+// .addbtndiv{
+//   width: 80px;
+// }
+
+
+.btn-border-gradient-wrap--gold:hover a.btn,.btn-border-gradient-wrap--gold:hover button.btn {
   text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
     0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5),
     0 0 15px rgba(250, 250, 214, 0.5);
 }
 
-a.btn-border-gradient {
+button.btn-border-gradient {
   font-size: 21px;
-  background: #000;
+  background-color: #2b2b2b;
+}
+a.btn-border-gradient{
+  font-size: 21px;
+  background: radial-gradient(#000000,#000);
 }
 
 .btn-text-gradient--gold,.bt {
@@ -117,10 +165,10 @@ a.btn-border-gradient {
 p.bt,
 button.bt {
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 0.9;
   position: relative;
   display: inline-block;
-  padding: 0px 1px;
+  padding: 0px 0px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -133,7 +181,7 @@ button.bt {
   letter-spacing: 0.1em;
   color: #212529;
   border-radius: 0.5rem;
-  transform: translate(0%,20%);
+  transform: translate(-10%,30%);
 }
 
 

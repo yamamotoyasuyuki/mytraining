@@ -37175,6 +37175,28 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/edit.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/edit.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/graph.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/graph.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/main.scss":
 /*!**********************************!*\
   !*** ./resources/sass/main.scss ***!
@@ -37220,9 +37242,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/user.scss ./resources/sass/signin.scss ./resources/sass/main.scss ./resources/sass/calendar.scss ./resources/sass/pulldown.scss ***!
-  \**************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/user.scss ./resources/sass/signin.scss ./resources/sass/main.scss ./resources/sass/calendar.scss ./resources/sass/pulldown.scss ./resources/sass/graph.scss ./resources/sass/edit.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37232,7 +37254,9 @@ __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/use
 __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/signin.scss */"./resources/sass/signin.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/main.scss */"./resources/sass/main.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/calendar.scss */"./resources/sass/calendar.scss");
-module.exports = __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/pulldown.scss */"./resources/sass/pulldown.scss");
+__webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/pulldown.scss */"./resources/sass/pulldown.scss");
+__webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/graph.scss */"./resources/sass/graph.scss");
+module.exports = __webpack_require__(/*! /home/ec2-user/environment/mytraining/resources/sass/edit.scss */"./resources/sass/edit.scss");
 
 
 /***/ })

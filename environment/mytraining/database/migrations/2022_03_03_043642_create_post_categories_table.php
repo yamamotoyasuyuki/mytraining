@@ -15,7 +15,10 @@ class CreatePostCategoriesTable extends Migration
     {
         Schema::create('post_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->string('body_part_id');
             $table->string('name' , 100);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

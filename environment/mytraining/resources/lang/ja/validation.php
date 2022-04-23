@@ -59,7 +59,7 @@ return [
     'image' => 'The :attribute must be an image.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
-    'integer' => 'The :attribute must be an integer.',
+    'integer' => '　！:attribute は数値入力でお願いします。',
     'ip' => 'The :attribute must be a valid IP address.',
     'ipv4' => 'The :attribute must be a valid IPv4 address.',
     'ipv6' => 'The :attribute must be a valid IPv6 address.',
@@ -145,9 +145,12 @@ return [
     |
     */
 
-     'attributes' => [
-        'body_part_id'  => '部位',
-         'post_category_id'=> '種目',
-        ],
- 
-];
+         'attributes' => [
+         'body_part_id'  => '部位',
+         'training_id'  => 'トレーニング名',
+         'set_data'=> 'セット数',
+         'weight_data'=> '重さ',
+         'count_data'=> '回数',
+     ],
+     
+  ];

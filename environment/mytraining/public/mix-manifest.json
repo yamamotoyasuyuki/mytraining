@@ -6,7 +6,8 @@
     "/css/main.css": "/css/main.css",
     "/css/calendar.css": "/css/calendar.css",
     "/css/pulldown.css": "/css/pulldown.css",
-    "/js/calendar.js": "/js/calendar.js",
+    "/css/graph.css": "/css/graph.css",
+    "/css/edit.css": "/css/edit.css",
     "/js/dropdown.js": "/js/dropdown.js",
-    "/js/itemadd.js": "/js/itemadd.js"
+    "/js/graph.js": "/js/graph.js"
 }

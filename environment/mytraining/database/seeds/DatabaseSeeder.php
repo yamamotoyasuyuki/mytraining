@@ -14,6 +14,6 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         $this->call(BodyPartTableSeeder::class);
         $this->call(PostCategoryTableSeeder::class);
-        $this->call(BodyPartPostCategorySeeder::class);
+        $this->call(WeightLogSampleSeeder::class);
     }
 }

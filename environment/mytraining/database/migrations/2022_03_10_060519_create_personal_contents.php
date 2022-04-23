@@ -15,8 +15,10 @@ class CreatePersonalContents extends Migration
     {
         Schema::create('personal_contents', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('bodypart_name');
-            $table->string('training_name');
+            $table->integer('user_id');
+            $table->date('trainday');
+            $table->integer('body_part_id');
+            $table->integer('post_category_id');
             $table->integer('set_data');
             $table->integer('weight_data');
             $table->integer('count_data');

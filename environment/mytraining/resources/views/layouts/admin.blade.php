@@ -36,14 +36,9 @@
     <link href="{{ secure_asset('css/signin.css') }}" rel="stylesheet">
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
-  <body class="text-center">
-  <div class="entire">
-  <header class="signin-nav">
-   <div class="signin-nav-content">
-     <a href="https://dde0a5f9c85f40c08433a37789e23c97.vfs.cloud9.us-east-2.amazonaws.com/"　class="oppai">ホーム</a>
-   </div>
-  </header>
-  @yield('content')
-  </div>
+  <body class="text-center container-fluid">
+    <div class="entire container-fluid signin-nav">
+    @yield('content')
+    </div>
   </body>
 </html>
