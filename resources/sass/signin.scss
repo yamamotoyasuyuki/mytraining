@@ -1,0 +1,268 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: space-around;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 368px;
+  padding-left: 100px;
+}
+.checkbox{
+  font-weight: bold;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 20px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.entire{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.login-header {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+  position: relative;
+  -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+}
+.register-header{
+  padding: 7px 0 7px 0;
+}
+
+.login-header:before,
+.login-header:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background-image: -webkit-linear-gradient(315deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+  background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+}
+
+.login-header:before {
+  top: 0;
+}
+
+.login-header:after {
+  bottom: 0;
+}
+
+.login-body{
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+form{
+  width: 140%;
+}
+
+.form-signin　a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-group .col-md-2{
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+.form-group .col-md-3{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group .col-md-6{
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.signin-nav-content{
+  width: 1000px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signin-nav-content a{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#4fb5ef, #0076b9 100%);
+  border: 1px solid #005e94;
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 2px 0px rgb(255, 255, 255);
+  box-shadow: 0px 4px 4px 0px rgb(175, 175, 175);
+  box-sizing: border-box;
+  width: 10%;
+  height: 35px;
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  // position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.signin-nav-content a:hover {
+  opacity: .7;
+}
+
+.login-box{
+  width: 800px;
+  max-width: 100%;
+}
+
+.textbox,.textbox:focus{
+  background-color: #5e5e5e;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+}
+
+
+.btndesign{
+   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
+    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+   background-color: #BAB049;
+   color: #fff;
+   font-size: 1.4rem;
+   padding: 0.6rem 1.8rem;
+}
+// // 以下ゴールドボタン
+
+// *,
+// *:before,
+// *:after {
+//   -webkit-box-sizing: inherit;
+//   box-sizing: inherit;
+// }
+
+// html {
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+
+// .btn,
+// a.btn,
+// button.btn {
+//   font-size: 1.6rem;
+//   font-weight: 700;
+//   line-height: 1;
+//   position: relative;
+//   display: inline-block;
+//   padding: 13px;
+//   cursor: pointer;
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+//   -webkit-transition: all 0.3s;
+//   transition: all 0.3s;
+//   text-align: center;
+//   vertical-align: middle;
+//   text-decoration: none;
+//   letter-spacing: 0.1em;
+//   border-radius: 0.5rem;
+//   width: 180px;
+//   height: 57px;
+// }
+
+// .btn-border-gradient-wrap {
+//   display: inline-block;
+
+//   padding: 0.4rem;
+
+//   border-radius: 2.5rem;
+//   width: 200px;
+//   height: 70px;
+// }
+
+// .btn-border-gradient-wrap--gold {
+//   background-image: -webkit-linear-gradient(
+//     315deg,
+//     #704308 0%,
+//     #ffce08 37%,
+//     #fefeb2 47%,
+//     #fafad6 50%,
+//     #fefeb2 53%,
+//     #e1ce08 63%,
+//     #704308 100%
+//   );
+//   background-image: linear-gradient(
+//     135deg,
+//     #704308 0%,
+//     #ffce08 37%,
+//     #fefeb2 47%,
+//     #fafad6 50%,
+//     #fefeb2 53%,
+//     #e1ce08 63%,
+//     #704308 100%
+//   );
+// }
+
+// .btn-border-gradient-wrap--gold:hover a.btn,
+// .btn-border-gradient-wrap--gold:hover button.btn{
+//   text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
+//     0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5),
+//     0 0 15px rgba(250, 250, 214, 0.5);
+// }
+
+// a.btn-border-gradient,
+// button.btn-border-gradient{
+//   font-size: 1.7rem;
+//   background: #000;
+// }
+
+// .btn-text-gradient--gold {
+//   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
+//     "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+
+//   background: -webkit-gradient(
+//     linear,
+//     left bottom,
+//     left top,
+//     from(#ffffdb),
+//     to(#a16422)
+//   );
+
+//   background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
+
+//   background: linear-gradient(to top, #ffffdb, #a16422);
+//   -webkit-background-clip: text;
+
+//   -webkit-text-fill-color: transparent;
+// }

@@ -1,0 +1,57 @@
+.achievement-layout {
+  display: flex;
+}
+
+.edit-layout {
+  margin-left: 50px;
+  width: 56%;
+}
+
+.edittable tr,
+.edittable td,
+.edittable th {
+  color: #000;
+  border: 2px solid #dee2e6;
+}
+
+.personaledit {
+  color: #c5a53e;
+}
+
+.personalfont,
+.personaledit,
+.edittable th {
+  font-size: 18px;
+}
+
+.personaldelete {
+  font-size: 20px;
+}
+
+.edittable {
+  background-color: #fff;
+  border: solid 3px #c5a53e;
+}
+
+.edit-thead th {
+  padding: 5px;
+  text-align: center;
+}
+
+.edit-tbody td {
+  padding: 6px;
+}
+
+.homeachievewidth {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.personaldelete-height {
+  text-align: center;
+}
+
+.edit-thead {
+  border-bottom: solid 3px #d1d1d1;
+}
+

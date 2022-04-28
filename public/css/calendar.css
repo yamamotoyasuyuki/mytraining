@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+.container {
+  font-family: "Noto Sans JP", sans-serif;
+  margin-top: 80px;
+}
+
+.calendar-container {
+  width: 31%;
+  margin: 22px 0 0 40px;
+  border: solid 3px #c5a53e;
+  height: 445px;
+}
+
+table,
+.calendar-container {
+  font-family: "\30D2\30E9\30AE\30CE\660E\671D   Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HGS\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", serif;
+}
+
+.calendar-heading {
+  margin-left: 70px;
+  font-weight: bold;
+  padding-top: 11px;
+  margin-bottom: 10px;
+}
+
+.calendarindex {
+  transform: translate(0%, -20%);
+}
+
+.display-none {
+  display: none;
+}
+
+.td-c a {
+  background-image: linear-gradient(0deg, #b8751e 0%, #ffce08 37%, #fefeb2 47%, #fafad6 50%, #fefeb2 53%, #e1ce08 63%, #b8751e 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 25px;
+  position: absolute;
+  margin: 13px 0 0 4px;
+}
+
+.th-c {
+  height: 25px;
+  width: 56px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.td-c {
+  height: 70px;
+  background-color: #fff;
+  vertical-align: top;
+}
+
+.today {
+  background: #ff8787 !important;
+  height: 70px;
+  vertical-align: top;
+}
+
+td:not(.today) {
+  color: #000;
+}
+
+.th-c:nth-of-type(2),
+.td-c:nth-of-type(2),
+.th-c:nth-of-type(3),
+.td-c:nth-of-type(3),
+.th-c:nth-of-type(4),
+.td-c:nth-of-type(4),
+.th-c:nth-of-type(5),
+.td-c:nth-of-type(5),
+.th-c:nth-of-type(6),
+.td-c:nth-of-type(6) {
+  color: #000;
+}
+
+.th-c:nth-of-type(1),
+.td-c:nth-of-type(1) {
+  color: red;
+}
+
+.th-c:nth-of-type(7),
+.td-c:nth-of-type(7) {
+  color: #00d0ff;
+}
+
+.table-width {
+  width: 100%;
+}
+
+table .calendar {
+  width: 50%;
+}
+
+table .calendar th,
+table .calendar td {
+  padding: 8px;
+  text-align: center;
+  border: 3px solid #000;
+}
+
+table .calendar td {
+  font-size: 15px;
+}
+
+/* 行の最初のtdは日曜日なため赤く */
+
+table .calendar th:first-of-type,
+table .calendar td:first-of-type {
+  background-color: #ffefef;
+  color: #FF0000;
+  font-weight: bold;
+}
+
+/* 行の最後のtdは土曜日なため青く */
+
+table .calendar th:last-of-type,
+table .calendar td:last-of-type {
+  background-color: #ededff;
+  color: #0000FF;
+  font-weight: bold;
+}
+
+/* 今日の日付 */
+
+table .calendar td.today {
+  background-color: #fbffa3;
+  font-weight: bold;
+}
+

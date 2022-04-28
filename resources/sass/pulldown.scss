@@ -1,0 +1,201 @@
+.pagetitle{
+    border-bottom: 4px solid #c5a53e;
+    font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
+    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.formagg{
+    display: flex;
+    justify-content: center;
+    
+}
+.form1,.form2,.form3{
+    background-color: rgb(0,0,0);
+    color: #fff;
+    font-weight: bold;
+    font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
+    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+.form1{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #b0b0b0;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.form2{
+    width: 21%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #b0b0b0;
+    border-radius: 30px;
+    margin-right: 50px;
+    padding: 10px 0 0 37px;
+}
+.form3{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #b0b0b0;
+    border-radius: 30px;
+    padding: 10px 13px 0 33px;
+}
+// .pulldown{
+//     display: flex;
+//     justify-content: space-between;
+// }
+.bui,.shumoku{
+    display: flex;
+}
+.bui p,.shumoku p{
+    margin-left: 15px;
+}
+
+.children{
+    width: 300px;
+    margin-right: 40px;
+}
+.save-btn{
+    font-size: 20px;
+    width: 80px;
+    height: 30px;
+    margin: 20px 0px 0px 230px;
+}
+.save-btn1{
+    font-size: 20px;
+    width: 80px;
+    height: 30px;
+}
+.save-btn2{
+    font-size: 15px;
+    width: 25px;
+    height: 23px;
+    margin: 5px 10px 0 0;
+}
+.btnposition{
+    margin: 0 0 9px -48px;
+}
+
+.bui p,.shumoku p{
+    font-weight: bold;
+    font-size: 20px;
+    height: 17px;
+}
+.traincontents{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 10px 0 10px 76px;
+}
+.traincontents .traincontents-select,.bodypartchoice,.setselect {
+    font-size: 18px;
+}
+.set-select{
+    margin-top: 1px;
+}
+.traincontents p{
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+.trainweight{
+    width: 70px;
+    height: 21px;
+}
+.postocatecoryedit{
+    width: 300px;
+    margin: 0 0 8px 22px;
+    font-weight: bold;
+}
+.parent,.children,#trainday{
+    font-size: 17px;
+}
+
+.hidden{
+    display: none;
+}
+.hiddenboxform2{
+     display: flex;
+    justify-content: space-between;
+    width: 68%;
+    margin: 0 0 13px 53px;
+}
+.hiddenboxform3{
+     display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 0 13px 53px;
+}
+.delete-list h5{
+    cursor: pointer;
+    color: #fff;
+    
+}
+.delete-list h5:hover{
+    color: #b04188;
+}
+
+ul.list{
+    list-style: none;
+    margin-left: -50px;
+    font-size: 17px;
+}
+.pointer{
+    cursor: pointer;
+}
+.checkbox-space{
+    margin-right: 8px;
+}
+.bodypartdelete-h,.h5bold,.postocatecorydelete-h{
+    font-weight: bold;
+}
+.postocatecorydelete-h{
+    margin-top: 7px;
+}
+.bodypartdelete-h{
+    margin-top: 9px;
+}
+.bodypartadd{
+    width: 160px;
+}
+.bodypartadd-form{
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+}
+.postcategory-form{
+    display: flex;
+    justify-content: space-between;
+}
+.postcategory-form{
+    margin: -22px 0 0 0;
+}
+.bi{
+    font-size: 30px;
+}
+
+.bi-dash-circle{
+    color: #12b8ff;
+    margin: 0 10px 0 0;
+}
+.bodypart-edit{
+    font-weight: bold;
+}
+
+.traindayflex{
+    margin: 0 0 0 20px;
+    width: 339px;
+    padding-top: 15px;
+    justify-content: space-between;
+    font-weight: bold;
+    display: flex;
+}
+.traindaylabel{
+    font-size: 20px;   
+}
+#trainday,.parent,.children,.traincontents-select,.trainweight,.bodypartchoice,
+.bodypartadd{
+    font-weight: bold;
+}
