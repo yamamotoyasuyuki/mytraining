@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+html,
+body {
+  background-color: #fff;
+}
+
+.nav-main {
+  width: 100%;
+  height: 35px;
+  background-color: black;
+  display: flex;
+}
+
+.navbarDropdown {
+  transform: transitiontranslate(0%, -10%);
+}
+
+.nav-main-content {
+  flex-grow: 2;
+  padding: 0 0 0 10px;
+  transform: translate(0px, -3px);
+}
+
+.nav-main-menu {
+  display: flex;
+  flex-grow: 0.1;
+  height: 33px;
+  justify-content: space-between;
+}
+
+.judgment {
+  display: inline;
+}
+
+.judgmentdiv {
+  margin: -3px 0px 0px -6px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.btn,
+a.btn,
+button.btn,
+button.btn,
+.nav-main-li {
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  padding: 4px 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+.btn-border-gradient-wrap {
+  display: inline-block;
+  border-radius: 0.5rem;
+}
+
+.btn-border-gradient-wrap--gold {
+  height: 30px;
+}
+
+.btn-border-gradient-wrap--gold1 {
+  background-image: linear-gradient(135deg, #704308 0%, #ffce08 37%, #fefeb2 47%, #fafad6 50%, #fefeb2 53%, #e1ce08 63%, #704308 100%);
+  height: 34px;
+  width: 65px;
+  padding: 1px 0px 0 1px;
+}
+
+.menuline {
+  border-bottom: 2px solid #ededed;
+}
+
+.btn-width {
+  width: 70px;
+  transform: translate(325%, -20%);
+}
+
+.pcselectbtwidth {
+  width: 70px;
+}
+
+.calendarbtn-width {
+  display: flex;
+  justify-content: space-between;
+  width: 283px;
+}
+
+.addbtndiv .addbutton .addspan {
+  font-size: 18px;
+}
+
+.addbutton {
+  width: 41px;
+}
+
+.btn-border-gradient-wrap--gold:hover a.btn,
+.btn-border-gradient-wrap--gold:hover button.btn {
+  text-shadow: 0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5);
+}
+
+button.btn-border-gradient {
+  font-size: 21px;
+  background-color: #2b2b2b;
+}
+
+a.btn-border-gradient {
+  font-size: 21px;
+  background: radial-gradient(#000000, #000);
+}
+
+.btn-text-gradient--gold,
+.bt {
+  font-family: "\30D2\30E9\30AE\30CE\660E\671D   Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HGS\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", serif;
+  background: linear-gradient(to top, #ffffdb, #a16422);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bt,
+p.bt,
+button.bt {
+  font-weight: 700;
+  line-height: 0.9;
+  position: relative;
+  display: inline-block;
+  padding: 0px 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  transform: translate(-10%, 30%);
+}
+
+.bt-border-gradient-wrap {
+  display: inline-block;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+p.bt-border-gradient {
+  font-size: 21px;
+}
+
+.bt-text-gradient--silver {
+  background: linear-gradient(to top, #fff, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "\30D2\30E9\30AE\30CE\660E\671D   Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HGS\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: pink;
+}
+
