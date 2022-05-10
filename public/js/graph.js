@@ -152,7 +152,7 @@ for (var key in monthlyArray) {
 }
 
 var targetPostCategoryName = document.getElementById("hidden2").value;
-var labels = ['1月目', '2月目', '3月目', '4月目', '5月目', '6月目', '7月目', '8月目', '9月目', '10月目', '11月目', '12月目'];
+var labels = ['1ヶ月目', '2ヶ月目', '3ヶ月目', '4ヶ月目', '5ヶ月目', '6ヶ月目', '7ヶ月目', '8ヶ月目', '9ヶ月目', '10ヶ月目', '11ヶ月目', '12ヶ月目'];
 var data = {
   labels: labels,
   datasets: [{
